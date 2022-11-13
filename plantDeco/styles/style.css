@@ -15,6 +15,10 @@ h1 {
     animation: gradienteh1 3s linear infinite alternate both;
 }
 
+.aTitulo {
+    -webkit-animation: gradienteh1 3s linear infinite alternate both;
+    animation: gradienteh1 3s linear infinite alternate both;
+}
 
 .volver {
     position: fixed;
@@ -194,4 +198,5 @@ img {
 
 a{
     text-decoration:none;
+
 }
