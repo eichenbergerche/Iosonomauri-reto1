@@ -1,0 +1,197 @@
+
+body{
+    min-width:350px;
+    width:100vw;
+    color:#5E953C;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'DM Sans', sans-serif;
+}
+h1 {
+    color: #30501D;
+    margin: 0px;
+    font-size: 3.5em;
+    -webkit-animation: gradienteh1 3s linear infinite alternate both;
+    animation: gradienteh1 3s linear infinite alternate both;
+}
+
+
+.volver {
+    position: fixed;
+    left: 2rem;
+    bottom: .5rem;
+    border-radius: 100%;
+    margin: 2% 0px;
+	border-radius:28px;
+	border:1px solid #458525;
+	display:inline-block;
+	cursor:pointer;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+    -webkit-animation: gradiente 3s linear infinite alternate both;
+    color: #fafafa;
+    animation: gradiente 3s linear infinite alternate both;
+}
+
+.volver:hover {
+    opacity: 100%;
+}
+.top {
+    position: fixed;
+    right: 2rem;
+    bottom: .5rem;
+    border-radius: 100%;
+    margin: 2% 0px;
+	border-radius:28px;
+	border:1px solid #458525;
+	display:inline-block;
+	cursor:pointer;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+    -webkit-animation: gradiente 3s linear infinite alternate both;
+    color: #fafafa;
+    animation: gradiente 3s linear infinite alternate both;
+}
+
+.top:hover {
+    opacity: 100%;
+}
+
+.hidden {
+    opacity: 30%;
+}
+
+.contactoBoton {
+    margin: 2% 0px;
+	border-radius:28px;
+	border:1px solid #458525;
+	display:inline-block;
+	cursor:pointer;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+    -webkit-animation: gradiente 3s linear infinite alternate both;
+    color: #fafafa;
+    animation: gradiente 3s linear infinite alternate both;
+	
+}
+.contactoBoton:hover {
+    -webkit-animation: gradienteHover 1s linear infinite alternate both;
+    color: #30501D;
+    animation: gradienteHover 1s linear infinite alternate both;
+}
+@-webkit-keyframes gradiente {
+    0% {background-color: #5E953C;}
+    100% {background-color: #30501D;}
+}
+@keyframes gradiente {
+    0% {background-color: #5E953C;}
+    100% {background-color: #30501D;}
+}
+@-webkit-keyframes gradienteHover {
+    0% {background-color: #E7E6E2;}
+    100% {background-color: #fafafa;}
+}
+@keyframes gradienteHover {
+    0% {background-color: #E7E6E2;}
+    100% {background-color: #fafafa;}
+}
+@-webkit-keyframes gradienteh1 {
+    0% {color: #61793A;}
+    100% {color: #30501D;}
+}
+@keyframes gradienteh1 {
+    0% {color: #61793A;}
+    100% {color: #30501D;}
+}
+
+.contactoBoton:active {
+	position:relative;
+	top:1px;
+}
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #30501D;
+    align-content: center;
+    padding: 1% 4%;
+
+}
+.home {
+    display: flex;
+    justify-content: space-between;
+    background: #DFDFDF;
+    padding: 2% 4%;
+    height: 80vh;
+    align-items: center;
+}
+.textosHome {
+    width: 40vw;
+}
+.textosHome p{
+    font-size: 1.5em;
+}
+.imagenHome img{
+    width: 40vw;
+    border-radius: 20px;
+
+}
+
+img {
+    border-radius: 10px;
+}
+
+.trabajos {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 0%;
+    
+}
+
+.textosTrabajos{
+    padding: 2% 0%;
+    text-align: center;
+    flex-flow: row wrap;
+}
+
+.cardTrabajos{
+    padding: 2% 4%;
+    display: flex;
+    flex-flow: row wrap;    
+}
+.card{
+	box-sizing: border-box;
+	padding: 20px;
+	flex: 0 33.33%;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4% 0%;
+    text-align: center;
+    height: 80vh;
+    background: url("/plantDeco/images/contactoDesktop.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.redesContacto{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.svgContacto svg{
+    width: 50px ;
+    height: 50px ;
+}
+
+a{
+    text-decoration:none;
+}
