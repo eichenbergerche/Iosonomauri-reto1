@@ -175,14 +175,22 @@ a {
     height: 100vh;
     
   }
+  .description{
+    padding: 10px 0;
+  }
 
   .buttons {
-    height: 200px;
+    height: 300px;
     justify-content: space-between;
+    margin: 0;
   }
-  
+  .buttons a {
+    min-height: 60px;
+    font-size: 20px;
+  }
   img {
-    max-width: 200px;
+    margin-top: 10px;
+    max-width: 150px;
     width: 40vw;
     height: auto;
   }
