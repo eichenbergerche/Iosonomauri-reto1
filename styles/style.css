@@ -3,6 +3,7 @@
   --primary-font-color: #253237;
   --secondary-color: #5C6B73;
   --secondary-font-color: #E0FBFC;
+
   --font-color: #D5E6FF;
   --bg-color: #253237;
   --heading-color: #E0FBFC;
@@ -13,69 +14,74 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
+}
+
+body {
   background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  padding: 2rem 5%;
-  color: var(--font-color);
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .header {
   text-align: center;
   color: var(--heading-color);
-  margin-bottom: 1.5rem;
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin-bottom: 20px;
 }
 
 .image {
-  width: 150px;
-  height: 150px;
-  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #E0FBFC;
+  border: 5px solid var(--heading-color);
+  width: 120px;
+  height: auto;
+  object-fit: cover;
 }
 
 .description {
-  text-align: justify;
-  margin: 1.5rem 0;
-  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
-  line-height: 1.6;
-  max-width: 600px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 20px 0;
+  max-width: 800px;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 15px; /* Espaciado uniforme entre botones */
   width: 100%;
-  max-width: 600px;
+  max-width: 500px; /* Ancho máximo en pantallas grandes */
 }
 
 .buttons a {
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 1rem;
+  align-items: center;
+  padding: 10px 20px;
+  border: none;
   border-radius: 30px;
+  font-size: 1rem;
   text-decoration: none;
-  font-weight: 500;
-  transition: transform 0.2s ease;
-  min-height: 50px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .buttons a:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .linkedin {
@@ -90,29 +96,72 @@ img {
   color: var(--secondary-font-color);
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .content {
-    padding: 1.5rem 5%;
+/* --- Responsive styles --- */
+
+/* Mobile (hasta 600px) */
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 1.5rem;
   }
-  
-  .image {
-    width: 120px;
-    height: 120px;
+
+  img {
+    width: 100px;
   }
-  
+
+  .description {
+    font-size: 0.9rem;
+  }
+
   .buttons a {
     font-size: 0.9rem;
-    padding: 0.8rem;
   }
 }
 
-@media (max-width: 480px) {
-  .description {
-    text-align: left;
+/* Tablet (601px a 900px) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .header {
+    font-size: 2rem;
   }
-  
+
+  img {
+    width: 150px;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
   .buttons a {
-    font-size: 0.85rem;
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
+/* Desktop (901px en adelante) */
+@media only screen and (min-width: 901px) {
+  .header {
+    font-size: 2.5rem;
+  }
+
+  img {
+    width: 180px;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    flex-direction: row; /* Botones en línea horizontal */
+    flex-wrap: wrap; /* Permite que los botones bajen si no hay espacio */
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .buttons a {
+    font-size: 1.2rem;
+    min-width: 150px;
+    max-width: 200px; /* Controlamos el ancho en pantallas grandes */
+    padding: 15px 30px;
   }
 }
