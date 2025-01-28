@@ -124,7 +124,8 @@ a {
 /* Mobile */
 @media only screen and (max-width: 600px) {
   .content {
-    height: 95vh;
+    height: 100vh;
+justify-content: space-evenly;
   }
 
   .buttons {
